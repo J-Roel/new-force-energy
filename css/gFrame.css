@@ -1,0 +1,210 @@
+/*--DEFAULTS--*/
+body{
+  margin:0;
+} 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grow {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.gcontainer {
+  padding-left:15px;
+  padding-right:15px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 750px;
+}
+.gcol-1s, .gcol-2s, .gcol-3s, .gcol-4s, .gcol-5s, .gcol-6s, .gcol-7s, .gcol-8s, .gcol-9s, .gcol-10s, .gcol-11s, .gcol-12s, .gcol-1n, .gcol-2n, .gcol-3n, .gcol-4n, .gcol-5n, .gcol-6n, .gcol-7n, .gcol-8n, .gcol-9n, .gcol-10n, .gcol-11n, .gcol-12n {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gcol-1s, .gcol-2s, .gcol-3s, .gcol-4s, .gcol-5s, .gcol-6s, .gcol-7s, .gcol-8s, .gcol-9s, .gcol-10s, .gcol-11s, .gcol-12s {
+  float: left;
+}
+.gcol-1s {
+  width: 8.333333333%;
+}
+.gcol-2s {
+  width: 16.666666666%;
+}
+.gcol-3s {
+  width: 25%;
+}
+.gcol-4s {
+  width: 33.333333333%;
+}
+.gcol-5s {
+  width: 41.666666666%;
+}
+.gcol-6s {
+  width: 50%;
+}
+.gcol-7s {
+  width: 58.333333333%;
+}
+.gcol-8s {
+  width: 66.666666666%;
+}
+.gcol-9s {
+  width: 0.75%;
+}
+.gcol-10s {
+  width: 83.333333333%;
+}
+.gcol-11s {
+  width: 91.666666666%;
+}
+.gcol-12s {
+  width: 100%;
+}
+@media(min-width:768px) {
+  .gcontainer {
+    width: 1170px;
+  }
+  .gcol-1n, .gcol-2n, .gcol-3n, .gcol-4n, .gcol-5n, .gcol-6n, .gcol-7n, .gcol-8n, .gcol-9n, .gcol-10n, .gcol-11n, .gcol-12n {
+    float: left;
+  }
+  .gcol-1n {
+    width: 8.333333333%;
+  }
+  .gcol-2n {
+    width: 16.666666666%;
+  }
+  .gcol-3n {
+    width: 25%;
+  }
+  .gcol-4n {
+    width: 33.333333333%;
+  }
+  .gcol-5n {
+    width: 41.666666666%;
+  }
+  .gcol-6n {
+    width: 50%;
+  }
+  .gcol-7n {
+    width: 58.333333333%;
+  }
+  .gcol-8n {
+    width: 66.666666666%;
+  }
+  .gcol-9n {
+    width: 75%;
+  }
+  .gcol-10n {
+    width: 83.333333333%;
+  }
+  .gcol-11n {
+    width: 91.666666666%;
+  }
+  .gcol-12n {
+    width: 100%;
+  }
+}
+
+.gbg-danger {
+  background-color: red;
+}
+
+.gbg-text-info {
+  background-color: #CCC;
+  border: 1px solid #444;
+  box-shadow: 1px 1px 3px #444;
+}
+
+
+/*--TYPOGRAPHY--*/
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.8em;
+  }
+  h5 {
+    font-size: 1.6em;
+  }
+  h6 {
+    font-size: 1.4em;
+
+  }
+
+/*-h1 {
+    
+ 
+/*--TABLES--*/
+/*
+  Web browsers default styling for tables provide a poor user experience.
+  We should provide a few default styles to make up for this
+
+  TODO:
+  add style gtable-striped this should make every other row alternate coloration
+  add style gtable-bordered this should add a border to every single table cell
+  add style gtable-border:hover,gtable-striped:hover this should change the color of a row to highlight it when the mouse hovers over it
+*/
+.gtable-striped tr:nth-child(odd) {
+  background-color: gray;
+}
+.gtable-border td,th {
+  border: 1px solid #000;
+}
+
+.gtable-border td:hover {
+  background-color: yellow;
+}
+
+/*--BUTTONS--*/
+
+.gbtn {
+    background: linear-gradient( 30deg, rgb(0,0,100), rgb(51,51,255), rgba(50,50,255,0) );
+    border-radius: 10px;
+    padding: 17px 30px 17px 30px;
+    font-size: 1.4em;
+    box-shadow: 0.1px 0.1px 3px 1px #777;
+    color:inherit;
+    transition: box-shadow 0.5s, border-radius 0.5s;
+}
+.gbtn:hover {
+  box-shadow: 2px 2px 4px 2px #777;
+  border-radius: 5px;
+}
+.gbtn[type="input"] {
+    background: #fff;
+    border:1px solid rgb(151,151,255);
+    border-radius: 10px;
+    padding: 17px 30px 17px 30px;
+    font-size: 1.4em;
+    box-shadow: 0.1px 0.1px 3px 1px #777;
+    color:inherit;
+    transition: box-shadow 0.5s, border-radius 0.5s;
+}
+.gbtn[type="input"]:hover {
+    box-shadow: 2px 2px 4px 2px #777;
+    border-radius: 5px;
+    color: rgb(200,200,200);
+}
+.gbtn:disabled {
+    border-radius: 10px;
+    padding: 17px 30px 17px 30px;
+    font-size: 1.4em;
+    box-shadow: 0.1px 0.1px 3px 1px #777;
+    color:inherit;
+  background: linear-gradient( 30deg, rgb(0,0,0), rgb(51,51,50), rgba(50,50,50,0) );
+  
+}
+
+
+
+

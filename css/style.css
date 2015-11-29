@@ -1,0 +1,230 @@
+/*
+	STYLE.CSS:
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/*STRUCTURE----------------------------STRUCTURE*/
+html { }
+body { }
+
+.bg-filler {
+	position: fixed;
+	top:0; left:0; bottom:0; right:0;
+	z-index: -1;
+
+	/*background: rgb(32,32,32);
+	background: -moz-linear-gradient(45deg,  rgba(32,32,32,1) 0%, rgba(45,47,132,1) 100%);
+	background: -webkit-linear-gradient(45deg,  rgba(32,32,32,1) 0%,rgba(45,47,132,1) 100%);
+	background: linear-gradient(45deg,  rgba(32,32,32,1) 0%,rgba(45,47,132,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#2d2f84',GradientType=1 );
+*/
+
+background: rgb(32,32,32);
+background: -moz-linear-gradient(45deg,  rgba(32,32,32,1) 0%, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 0%, rgba(255,255,255,1) 0%, rgba(45,47,132,1) 100%);
+background: -webkit-linear-gradient(45deg,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(255,255,255,1) 0%,rgba(45,47,132,1) 100%);
+background: linear-gradient(45deg,  rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(32,32,32,1) 0%,rgba(255,255,255,1) 0%,rgba(45,47,132,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#2d2f84',GradientType=1 );
+
+
+}
+
+
+header {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 150px;
+	/*padding: 0.2em;*/
+	margin-bottom: 2em;
+	background-color: #fff;
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 10%;
+	box-shadow: 4px 4px 8px 4px #000;
+
+}
+
+footer {
+	background-color:#fff;
+	text-align: center;
+	padding: 2em;
+}
+
+article {
+  box-shadow: 2px 2px 4px 2px #444;
+
+}
+main {
+	margin-top:190px;
+}
+
+section {
+}
+
+.panel {
+	border-radius:5px;
+	background: #CCC;
+}
+
+
+/* LOGO -------------------- LOGO */
+#logo {
+	display:inline-block;
+	position: relative;
+  	background-image: url('../images/common/logo.png');
+  	background-repeat: no-repeat;
+  	width: 250px;
+  	height: 120px;
+}
+#sun-burst{
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	width: 700px;
+	height:700px;
+	background-image: url('../images/common/burst.png');
+	/*z-index: 10;*/
+}
+
+
+
+
+/*COLUMNS-------------------COLUMNS*/
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+.row:after {
+	content="";
+	display:table;
+	clear:both;
+}
+.clear {
+	clear:both;
+}
+
+
+/*IMAGES---------------------------------------------IMAGES*/
+img {
+	width: 100%;
+	margin:auto;
+}
+
+/*image resizing*/
+.resize_twenty{
+	max-width:20%;
+  	max-height:20%;
+}
+.resize_diagonal {
+	max-width:25%;
+  max-height:25%;
+}
+
+/*TYPE------------------------------------------------TYPE*/
+
+h1 {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+	font-size: 1.8em;
+	font-weight: bold;
+	color:#000;
+	vertical-align: top;
+	padding-top:10px;
+}
+
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	color: #000;
+}
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6em;
+	line-height: 2.8em;
+	font-weight: bold;
+	color: #000;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5em;
+	color: #000;
+}
+
+a:link {
+
+	text-decoration: none;
+	color: #000;
+}
+
+ul li p {
+	margin: 0.2em;
+}
+
+ul {
+	list-style: none;
+}
+
+.center {
+	text-align: center;
+}
+copyright {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+
+}
+
+
+
+
+/*NAV-------------------------------------------NAV*/
+nav {
+}
+nav ul {
+	margin: 1em auto; /*position from top of screen*/
+	list-style: none;
+	padding-top:20px;
+}
+nav ul li {
+	text-align:right;
+	padding-right:15px;
+}
+nav ul li a {
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	
+	color: #000;
+	text-decoration: none;
+
+}
+nav ul li a:hover {
+	text-shadow:1px 1px 4px #000;
+
+}
+
+/*DECO----------------------------------------------DECO*/
+hr {
+    height: 0.3em;
+    margin-bottom: 2em;
+	background-color: #dadada;
+}
+
+.diagonal {
+
+	border-top: 50% solid transparent;
+	border-right: 50% solid #f6f6f6;
+}
+
+.curved-border {
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	width: 100%;
+	background-color: #fff;
+	min-height: 25px;
+	margin-top: 2em;
+	box-shadow: -4px -4px 12px 4px #000;
+}
