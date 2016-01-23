@@ -1,81 +1,62 @@
 window.onload = function(){
 
-	//MENU SLIDER
-	$('.menuBox').click( function (){ 
-		$('.slidedown').slideToggle('fast');
-	});
-	$('.slidedown').mouseleave(function() {
-		 $(this).slideToggle('fast');
-	});
+  
+  // Create cross browser requestAnimationFrame method:
+  window.requestAnimationFrame = window.requestAnimationFrame
+   || window.mozRequestAnimationFrame
+   || window.webkitRequestAnimationFrame
+   || window.msRequestAnimationFrame
+   || function(f){setTimeout(f, 1000/60)}
+   
+  //var div1 = document.getElementById('bubbles1');
+  //var div2 = document.getElementById('bubbles2');
+  var opacity1 = document.getElementById('logo');
+  var opacity2 = document.getElementById('headerlogo');
+  var opacity3 = document.getElementById('smlTitle');
+  opacity1.style.opacity = 1;
+   
+  function parallax(){
+   var scrolltop = $(window).scrollTop();//window.pageYOffset // get number of pixels document has scrolled vertically 
+   //div1.style.top = -scrolltop * .2 + 'px'; // move bubble1 at 20% of scroll rate
+   //div2.style.top = -scrolltop * .5 + 'px'; // move bubble2 at 50% of scroll rate
+    
+      //Decrease opacity on scroll down
+      opa = (1 - (scrolltop * 0.002));
+      if (opa > 1) { opa = 1; }
+      if (opa < 0) { opa = 0; }
+      opacity1.style.opacity = opa;
+      opacity3.style.opacity = opa;
 
-	//BOX CAPTIONS
-	$('.box').hover( 
-		function () { 
-			$(this).find('.caption').slideDown(250);
-		},
-		function () {
-			$(this).find('.caption').slideUp(250);
-		}
-	);
 
-	// $(document).ready(function(){
-	// 	$('#slider1') .cycle({
-	// 		fx: 'fade', // here change effect to blindX, blindY, blindZ etc 
-	// 		speed: 'slow', 
-	// 		timeout: 2000 
-	// 	});
-	// });
+      //Increase opacity on scroll down
+      opa = (scrolltop * 0.002);
+      if (opa > 1) { opa = 1; }
+      if (opa < 0) { opa = 0; }
+      opacity2.style.opacity = opa;
 
 
-
-
-//Scroll JQuery - http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
-function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
   }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
+  window.addEventListener('scroll', function(){ // on page scroll
+   requestAnimationFrame(parallax);
+  }, false)
+
+
+//------------------------------------------------------
+//SMOOTH SCROLL
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
         }
-      }
     }
-    return [];
-  }
-
+});
 
 
 
