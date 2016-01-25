@@ -17,15 +17,19 @@
 	<div class="container">
 		<ul>
 			<div class="col-md-6">
-      			<!-- <li class="title font-large"> New Force Energy Services, Inc.</li> -->
       			<li><img src="images/common/logo.png"></li>
       		</div>
       		<div class="col-md-6 text-right">
-      			<li class="title"> <span class="glyphicon glyphicon-home"></span></li>
-      			<li>|</li>
-				<li class="title">About</li>
-				<li>|</li>
-				<li class="title">Contact</li>
+      			<div class="hamburger">
+      				<div class="line"></div>
+      				<div class="line"></div>
+      				<div class="line"></div>
+      			</div>
+      			<div class="hidden-menu">
+      				<li class="title"> <span class="glyphicon glyphicon-home"></span></li>
+					<li class="title">About</li>
+					<li class="title">Contact</li>
+				</div>
 			</div>
 		</ul>
 
@@ -34,7 +38,7 @@
 
 	<div class="container">
 		<div class="col-md-12">
-		<h1>New Force Energy Services, Inc.</h1>
+		<h1>NEW FORCE ENERGY SERVICES, INC.</h1>
 		</div>
 	</div>
 
@@ -79,31 +83,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 	<!-- Load AngularJS -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 	
 	<!-- Load other scripts -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.4.9/angular-messages.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+	<!-- <script type="text/javascript" src="javascripts/scroller.js"></script> -->
 
 
-
+	
 
 	<!--- CONTROLLERS -->
-	<script type="text/javascript" src="newforceenergy.controller.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="javascripts/newforceenergy.controller.js"></script>
+
 
 </body>
 </html>

@@ -17,25 +17,22 @@ header {
 	background-color: rgba(45,47,132, 0.5);
 	width: 100%;
 	width: 100vw;
-	height: 96vh;
-	color: #fff;
+	height: 95vh;
+	color: #fff;/*#50ea99;*/
 	padding-top: 4em;
 	overflow: hidden;
 }
 header h1 {
-	font-size: 2.8em;
-	font-weight: 700;
+	font-size: 3em;
 }
 .header-bk {
 	position: fixed;
-	background: url("../images/common/fullpicture.JPG") no-repeat;
-	width: 100%; /*fallback*/
-	height: 100%;
-	/*width: 100vw;*/
-	/*height: 100vh;*/
+	background: url("images/common/fullpicture.jpg") no-repeat;
+	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	z-index: -10;
 }
-
 #s1{
 	background-color: #fff;
 	min-height: 20em;
@@ -51,14 +48,13 @@ header h1 {
 	min-height: 20em;
 }
 #call-to-action{
-	margin-top: 24em;
+	margin-top: 20em;
 
 }
 #call-to-action .btn {
-	background-color: rgba(45,47,132, 0.5);
+	background-color: transparent;
 	color: #fff;
 	font-size: 2em;
-	margin-right: 1em;
 }
 
 
@@ -77,6 +73,7 @@ nav ul {
  margin: 0;
 }
 nav ul li {
+	display: inline-block;
 	list-style: none;
 	padding: 10px 20px 10px 10px;
 	margin: 0;
@@ -88,36 +85,9 @@ nav ul li {
 .transparent {
 	background-color: transparent;
 }
-.hamburger {
-	position: fixed;
-	right: 8em;
-	top: 2em;
-	float: right;
-	width: 56px;
-	height: 56px;
-	padding: 4px;
-	/*border: 4px solid #2d2f84;*/
-	border-radius: 2px;
-	transition: all 0.25s;
-}
-.hamburger:hover {
-	box-shadow: 2px 2px 2px 1px #fff, -2px -2px 2px 1px #fff;
-}
-.hamburger .line {
-	width: 48px;
-	height: 7px;
-	background-color: #747584;
-	margin: 7px 0px 7px 0px;
-}
-.hidden-menu {
-	display: none;
-	border: 4px solid #747584;
-	border-radius: 2px;
-	transition: all 0.25s;
-}
+.front-pic{
 
-
-
+}
 /* ============= TYPOGRAPHY =============== */
 .font-large {
 	font-size: 1.5em;
